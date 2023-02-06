@@ -1,3 +1,4 @@
+const test = document.querySelector(".test");
 const canvas = document.querySelector(".canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -23,7 +24,7 @@ gsap.to(ball, {
     ease: "none",
     scrollTrigger: {
         scrub: 0.5,
-        pin: "canvas",
+        pin: test,
         end: "500%",
     },
     onUpdate: render,
