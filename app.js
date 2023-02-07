@@ -49,6 +49,16 @@ gsap.fromTo(
     }
 );
 
+gsap.to(".details h1", {
+    scrollTrigger: {
+        trigger: ".details",
+        toggleActions:"restart complete reverse reset",
+        // scrub: true,
+    },
+    duration: 2,
+    rotation: 360
+});
+
 images[0].onload = render;
 
 function render() {
